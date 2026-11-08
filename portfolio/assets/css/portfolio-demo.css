@@ -1,0 +1,12 @@
+/* Identidade independente para a demonstração pública */
+.portfolio-brand{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:#2563eb;color:white;font-size:26px;flex-shrink:0}
+.portfolio-visual{width:min(72%,420px);height:310px;margin:auto;border:1px solid rgba(255,255,255,.5);border-radius:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:linear-gradient(135deg,#123e95,#247ee2 55%,#9cddfa);box-shadow:0 35px 95px #06396e55;transform:rotate(-8deg);animation:demo-float 5s ease-in-out infinite}
+.portfolio-visual span{font-size:12px;letter-spacing:.35em;color:#e8f7ff}
+.portfolio-visual strong{font-size:clamp(50px,7vw,100px);color:#fff;letter-spacing:-.07em}
+.portfolio-visual small{color:#e8f7ff}
+.demo-toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:#eff6ff;color:#16478e;border:1px solid #bfdbfe;border-radius:14px;padding:12px 16px;margin-bottom:16px}
+.demo-toolbar strong{font-size:12px;letter-spacing:.08em}
+.demo-toolbar span{font-size:12px}
+@keyframes demo-float{50%{transform:rotate(-4deg) translateY(-14px)}}
+@media(max-width:600px){.portfolio-visual{height:200px;width:70%}}
+@media(prefers-reduced-motion:reduce){.portfolio-visual{animation:none}}

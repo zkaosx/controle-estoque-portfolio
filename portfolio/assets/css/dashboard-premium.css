@@ -1,0 +1,121 @@
+/* Havaianas Studio — Dashboard premium / mobile-first. */
+:root{--p-blue:#1248a3;--p-dark:#111e37;--p-border:#e7edf6;--p-shadow:0 16px 50px rgba(15,40,80,.055)}
+#app{background:radial-gradient(circle at 90% 0%,#e6f1ff 0,transparent 34%),#f7f9fd}
+#app .side{background:#0d1c36;position:sticky;top:0;height:100dvh;z-index:30;overflow-y:auto;scrollbar-width:thin;box-shadow:10px 0 35px #0b1a3010}
+#app .side .brand{font-size:26px;line-height:1.25;letter-spacing:-.06em}
+#app .side nav{display:grid;gap:5px}
+#app .side nav button{min-height:48px;font-size:13px;font-weight:650;transition:background .25s ease,color .25s ease,transform .25s ease}
+#app .side nav button.active{background:linear-gradient(110deg,#224c86,#17375f);box-shadow:inset 3px 0 #ff555b}
+#app .side nav button:not(.active):hover{transform:translateX(3px)}
+#app .main{width:100%;max-width:none;min-width:0;padding:36px clamp(20px,3.2vw,56px) 20px}
+#app .top{padding:0 0 24px;border-bottom:1px solid #e5ebf3;margin-bottom:25px;gap:15px}
+#app .top-title-group{min-width:0}
+#app .top h1{font-size:clamp(25px,2.8vw,37px);line-height:1.15;font-weight:850;letter-spacing:-.055em;margin:4px 0 7px}
+#app .top .muted{font-size:12px;color:#7a8ba4}
+.section-eyebrow,.welcome-kicker{font-size:10px;font-weight:850;letter-spacing:.16em;color:#3862a1}
+.online-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#16b986;margin-left:5px;box-shadow:0 0 0 4px #16b98620}
+#app .top-actions{justify-content:flex-end;gap:10px}
+#app .location-label{margin:0;color:#74849c;font-size:12px}
+#app .top select{width:160px;border-radius:12px;box-shadow:0 3px 12px #0c36740a}
+#app .top-actions button{background:#fff;border:1px solid #e1e8f2;color:#2a4264;padding:12px 18px}
+.dashboard-welcome{background:linear-gradient(120deg,#102c5b 0%,#1553a0 64%,#146dc5 100%);color:#fff;border-radius:24px;position:relative;overflow:hidden;padding:32px 35px;margin-bottom:23px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 18px 35px #104d9a20;isolation:isolate;animation:panel-rise .5s both}
+.dashboard-welcome[hidden]{display:none!important}
+.dashboard-welcome:before{content:'';position:absolute;width:320px;height:320px;right:-80px;top:-165px;border:1px solid #ffffff28;border-radius:50%;box-shadow:0 0 0 45px #ffffff08,0 0 0 95px #ffffff08;z-index:-1}
+.dashboard-welcome h2{font-size:clamp(23px,2.5vw,33px);font-weight:850;letter-spacing:-.05em;margin:8px 0 6px;color:#fff}
+.dashboard-welcome h2 span{color:#ff6269}
+.dashboard-welcome p{font-size:13px;color:#c3dcff;line-height:1.6;margin:0}
+.welcome-kicker{color:#92c5ff}
+.welcome-actions{display:flex;flex-wrap:wrap;gap:10px;z-index:1;flex-shrink:0}
+.welcome-actions button{background:#fff;color:#14488b;font-size:12px;padding:13px 18px;border-radius:11px}
+.welcome-actions button:hover{background:#eff6ff;color:#0e4086}
+.welcome-actions .welcome-secondary{background:#ffffff19;color:#fff;border:1px solid #ffffff50}
+.welcome-actions .welcome-secondary:hover{background:#ffffff30;color:#fff}
+.welcome-decoration{position:absolute;right:23%;top:-35px;font-size:180px;opacity:.06;pointer-events:none}
+#app .cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+#app .card{background:#fff;border:1px solid var(--p-border);border-radius:20px;min-height:140px;padding:25px;box-shadow:var(--p-shadow);transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease;animation:panel-rise .45s both}
+#app .card:hover{transform:translateY(-5px);box-shadow:0 20px 42px #1b4a8520;border-color:#d0e2f7}
+#app .card:before{height:3px}
+#app .card small{font-size:11px;letter-spacing:.09em;color:#778ba7}
+#app .card strong{font-size:clamp(25px,2.5vw,38px);margin-top:16px;color:#11294b}
+#app .panel{background:#fff;border:1px solid var(--p-border);border-radius:21px;padding:clamp(18px,2.3vw,30px);box-shadow:var(--p-shadow);animation:panel-rise .48s both;animation-delay:var(--panel-delay,0ms)}
+#app .panel h2{font-size:20px;font-weight:800;letter-spacing:-.04em;margin-bottom:18px}
+#app .panel .muted{font-size:13px;line-height:1.7}
+#app button{transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
+#app .panel button:not(.secondary):hover{box-shadow:0 9px 22px #105cb82a}
+#app input,#app select{min-height:46px;border-radius:12px}
+#app input[type=file]{height:auto;max-width:100%;padding:12px}
+#app .tablewrap{border:1px solid #e8eef5;border-radius:15px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#c6d5e9 transparent}
+#app table{min-width:600px;width:100%;font-size:13px}
+#app th{background:#f7f9fd;color:#6d7e96;font-size:10px;letter-spacing:.09em;padding:15px 17px}
+#app td{padding:15px 17px;color:#334762}
+#app tbody tr{transition:background .18s}
+#app tbody tr:hover{background:#f1f7ff}
+#app .empty-table{text-align:center;padding:40px 20px;color:#8a9ab1}
+#app .toolbar{gap:10px}
+#app .toolbar button{min-height:44px}
+#app .site-footer{margin-top:auto;padding-bottom:20px}
+.content-enter{animation:content-fade .35s ease both}
+.top-mobile-bar{display:none}
+.mobile-dock{display:none}
+.sidebar-backdrop{position:fixed;inset:0;background:#06152b99;z-index:39;backdrop-filter:blur(4px)}
+@keyframes panel-rise{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+@keyframes content-fade{from{opacity:.35;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1200px){#app .cards{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-welcome{align-items:flex-start;flex-direction:column}}
+@media(max-width:850px){#app .side{width:220px}#app .main{padding:24px 20px}.dashboard-welcome{padding:25px}}
+@media(max-width:700px){
+ #app.layout{display:block;padding-bottom:76px}
+ #app .side{position:fixed;top:0;left:0;width:min(310px,84vw);height:100dvh;transform:translateX(-105%);transition:transform .32s cubic-bezier(.2,.8,.2,1);z-index:40;padding:28px 18px;display:flex;box-shadow:12px 0 40px #07162b22}
+ #app .side.mobile-open{transform:translateX(0)}
+ #app .side nav{display:grid;overflow:visible;gap:6px}
+ #app .side nav button{width:100%;min-width:0;white-space:normal;text-align:left}
+ #app .side .subtle{display:block!important}
+ #app .main{min-height:100dvh;padding:18px 14px 10px}
+ #app .top{display:flex;flex-direction:column;align-items:stretch;gap:15px;margin-bottom:17px;padding-bottom:17px}
+ #app .top-mobile-bar{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+ #app .menu-trigger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;font-size:20px;border:1px solid #e3eaf4;background:#fff;color:#1b426e;box-shadow:none}
+ .mobile-brand{font-size:15px;font-weight:850;letter-spacing:-.05em;color:#17447f}
+ #app .top h1{font-size:27px;margin:5px 0}
+ #app .top .muted{font-size:11px;line-height:1.6}
+ #app .top-actions{justify-content:space-between;gap:8px}
+ #app .top-actions select{width:auto;flex:1;max-width:none}
+ #app .top-actions button{padding:12px 16px}
+ #app .location-label{display:none}
+ .dashboard-welcome{border-radius:20px;padding:23px 20px;gap:18px;margin-bottom:17px}
+ .dashboard-welcome h2{font-size:25px}
+ .dashboard-welcome p{font-size:12px}
+ .welcome-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}
+ .welcome-actions button{padding:13px 8px;font-size:11px}
+ #app .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:15px}
+ #app .card{padding:17px 14px;min-height:115px;border-radius:16px}
+ #app .card strong{font-size:26px;margin-top:11px}
+ #app .card small{font-size:10px;line-height:1.4;display:block}
+ #app .panel{padding:19px 15px;border-radius:18px;margin-bottom:15px}
+ #app .panel h2{font-size:18px}
+ #app .form{grid-template-columns:1fr}
+ #app .toolbar{align-items:stretch;display:flex;flex-direction:column}
+ #app .toolbar button,#app .toolbar input{width:100%;max-width:none}
+ #app .flex{align-items:stretch}
+ #app .flex>*{max-width:100%}
+ #app .tablewrap{margin:0 -4px}
+ #app table{font-size:12px}
+ #app td,#app th{padding:12px}
+ #app .site-footer{padding:25px 0 12px;font-size:10px;line-height:1.8}
+ #app .mobile-dock{position:fixed;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));bottom:0;left:0;right:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:#fffffff2;border-top:1px solid #e3eaf4;backdrop-filter:blur(20px);z-index:35;box-shadow:0 -10px 30px #12294a0d}
+ #app .mobile-dock button{display:flex;flex-direction:column;align-items:center;gap:3px;justify-content:center;padding:6px 0;min-height:48px;background:transparent;color:#70839e;box-shadow:none;border-radius:12px}
+ #app .mobile-dock button span{font-size:21px;line-height:1}
+ #app .mobile-dock button small{font-size:9px;font-weight:750}
+ #app .mobile-dock button.selected{background:#eaf2ff;color:#0c55af}
+ #message{bottom:calc(85px + env(safe-area-inset-bottom));left:12px;right:12px;max-width:none;font-size:13px}
+}
+@media(max-width:360px){#app .cards{gap:8px}#app .card{padding:14px 11px}#app .card strong{font-size:23px}}
+@media(prefers-reduced-motion:reduce){#app *,#app *::before,#app *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Marca personalizada: chinelos fornecidos pelo usuário */
+.side .brand{display:flex!important;align-items:center;gap:11px;line-height:1.15;margin:0 8px 34px!important;white-space:normal}
+.side .brand::before,.side .brand:before{content:none!important;display:none!important}
+.side .brand .brand-chinelo{display:block;width:48px;height:48px;object-fit:contain;flex:0 0 48px;filter:drop-shadow(0 4px 5px rgba(0,0,0,.18))}
+.side .brand .brand-copy{display:flex;flex-direction:column;min-width:0;color:#fff;font-weight:850;font-size:23px;letter-spacing:-.035em}
+.side .brand .brand-subtitle{display:block!important;margin:6px 0 0!important;color:#b4d1d6!important;font-size:10px!important;letter-spacing:.13em!important;text-transform:uppercase;font-weight:700!important;line-height:1.25}
+.mobile-brand{display:inline-flex;align-items:center;gap:7px}
+.mobile-brand-chinelo{width:25px;height:25px;object-fit:contain}
+@media(max-width:700px){.side .brand{margin:4px 8px 14px!important}.side .brand .brand-chinelo{width:39px;height:39px;flex-basis:39px}.side .brand .brand-copy{font-size:20px}}
